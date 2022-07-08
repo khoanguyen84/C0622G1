@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Google</title>
+</head>
+<body style="background-image: url('https://wallpaper.dog/large/999278.jpg'); background-attachment: fixed;">
+    <h3>Register Form</h3>
+    <p>Laboris ullamco duis aute veniam amet esse excepteur irure proident sint dolore. Dolor consectetur tempor nisi consectetur nulla consequat ut culpa sit velit ut minim. Excepteur cupidatat adipisicing laboris proident proident officia qui fugiat irure cillum excepteur ex minim. Commodo ea labore cillum sit fugiat aliqua nostrud ea incididunt cillum. Aliquip et laborum deserunt cupidatat aliquip. Consequat consequat nulla non amet cupidatat reprehenderit amet. Ipsum mollit voluptate consequat ad do ad officia.</p>
+    <form action="https://www.google.com/search" method="GET">
+        <table border="1">
+            <tbody>
+                <tr>
+                    <td>Avatar</td>
+                    <td>
+                        <input type="image" src="images/flower.jpg">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Introduction</td>
+                    <td>
+                        <textarea name="" id="" cols="30" rows="5"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Languages</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="" disabled>Select a language</option>
+                            <option value="">English</option>
+                            <option value="">Korean</option>
+                            <option value="">Jepannes</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Color</td>
+                    <td>
+                        <input type="color">
+                        <br>
+                        <input type="range">
+                        <br>
+                        <input type="file">
+                        <br>
+                        <input type="number">
+                        <br>
+                        <!-- url: uniform resource location -->
+                        <input type="url">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="keyword">Keyword</label>
+                    </td>
+                    <td>
+                        <!-- <input type="text" name="q" id="keyword" placeholder="Keyword">
+                        <br> -->
+                        <input type="search" name="q" id="keyword" placeholder="Keyword">
+                        <input type="hidden" name="code" value="CGH">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="pw"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td>Mobile</td>
+                    <td><input type="tel" name="mobile" required></td>
+                </tr>
+                <tr>
+                    <td>Date of birth</td>
+                    <td>
+                        <input type="date" name="dob" required>
+                        <input type="time" name="" id="">
+                        <br>
+                        <input type="datetime-local" name="dob" required>
+                        <br>
+                        <input type="month">
+                        <br>
+                        <input type="week">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" name="gender"> Male
+                        <input type="radio" name="gender"> Female
+                    </td>
+                </tr>
+                <!-- ctrl + alt + arrow key down/up -->
+                <tr>
+                    <td>Hobbies</td>
+                    <td>
+                        <input type="checkbox"> Football
+                        <input type="checkbox"> Swiming
+                        <input type="checkbox"> Walking
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <!-- <button type="submit">Search</button>
+                        <button type="reset">Cancel</button>
+                        <button type="button" onclick="alert('Hello anh em!')">Show Alert</button> -->
+                        <input type="submit" value="Search">
+                        <input type="reset" value="Cancel">
+                        <input type="button" value="Show Alert" onclick="alert('Hello anh em!')">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
