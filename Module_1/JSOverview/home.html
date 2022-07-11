@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <input type="password" id="pw">
+     <button id="btnPW"
+        onclick="showPassword()"
+     >Show password</button>
+
+
+    <img src="https://www.webinarleads4you.com/wp-content/uploads/2017/02/no-avatar-350x350.jpg" alt=""
+        onclick="changeAvatar()"
+        onmouseover="mouseOver()"
+        onmouseout="mouseOut()"
+    >
+
+     <script>
+        // function showPassword(){
+        //     document.getElementById('pw').style.color = 'red';
+        //     if(document.getElementById('pw').type == 'password'){
+        //         document.getElementById('pw').type = 'text';
+        //         document.getElementById('btnPW').innerText = 'Hide Password'
+        //     }else{
+        //         document.getElementById('pw').type = 'password';
+        //         document.getElementById('btnPW').innerText = 'Show Password'
+        //     }
+        // }
+        let flat = true;
+        function changeAvatar(){
+            if(flat == true){
+                document.getElementsByTagName('img')[0].src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1uENsfHX_t2wf1PJ9YL2jw8XkWV7UXK7uiuT9WDHhlZbZthwUVQVjz1kwkCZp2njRQN4&usqp=CAU'
+                flat = false;
+            }
+            else{
+                document.getElementsByTagName('img')[0].src = 'https://www.webinarleads4you.com/wp-content/uploads/2017/02/no-avatar-350x350.jpg'
+                flat = true;
+            }
+        }
+
+        function mouseOver(){
+            document.getElementsByTagName('img')[0].src = 'https://www.webinarleads4you.com/wp-content/uploads/2017/02/no-avatar-350x350.jpg'
+        }
+
+        function mouseOut(){
+            document.getElementsByTagName('img')[0].src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1uENsfHX_t2wf1PJ9YL2jw8XkWV7UXK7uiuT9WDHhlZbZthwUVQVjz1kwkCZp2njRQN4&usqp=CAU'
+        }
+     </script>
+     <script src="site.js"></script>
+</body>
+</html>

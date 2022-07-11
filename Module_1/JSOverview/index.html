@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Overview</title>
+</head>
+<body>
+    <!-- 
+        Các cách nhưng JS vào trong HTML
+        Cách 1 (inline): bổ sung vào sự kiện (event) của element
+        Cách 2 (internal): viết bên trong thẻ script
+        Cách 3 (external): viết bên trong file .js
+     -->
+     <button
+        onmouseover="this.innerHTML = new Date()"
+        onmouseout="this.innerHTML = 'Hover to show datetime'"
+     >Hover to show datetime</button>
+
+     <input type="text"
+        onfocus="this.style.border='5px solid red'"
+        onblur="this.style.border = '1px solid black'"
+     >
+     <h1
+        onclick="document.getElementsByTagName('span')[0].innerText = 'CGH75'"
+     >Click me to show Code</h1>
+     <span></span>
+
+     <input type="password" id="pw">
+     <button id="btnPW"
+        onclick="showPassword()"
+     >Show password</button>
+
+     <script>
+        document.write("<a href='#'>Lớp C0622G1</a>\n<a href='#'>Link</a>")
+        
+        // function showPassword(){
+        //     if(document.getElementById('pw').type == 'password'){
+        //         document.getElementById('pw').type = 'text';
+        //         document.getElementById('btnPW').innerText = 'Hide Password'
+        //     }else{
+        //         document.getElementById('pw').type = 'password';
+        //         document.getElementById('btnPW').innerText = 'Show Password'
+        //     }
+        // }
+       
+     </script>
+     <script src="site.js"></script>
+
+     <!-- 
+        onmouseover
+        onmouseout
+        onfucus
+        onblur
+        onclick
+        ondbclick
+        onchange
+        https://www.w3schools.com/jsref/dom_obj_event.asp
+      -->
+</body>
+</html>
