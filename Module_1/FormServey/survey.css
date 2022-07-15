@@ -6,8 +6,11 @@
 .container{
     margin: 0px auto;
     max-width: 90%;
-    border: 1px solid red;
     padding: 5px 5px;
+}
+
+hr{
+    border: 1px dashed gray;
 }
 
 ul{
@@ -21,7 +24,7 @@ select{
 textarea{
     width: 100%;
 }
-table{
+#tbRate{
     width: 100%;
 }
 
@@ -47,5 +50,9 @@ table{
     background-color: #e6e6e6;
 }
 #tbRate>tbody>tr:hover{
-    background-color: rgb(221, 221, 111);
+    background-color: #dddd6f;
+}
+
+.area:hover{
+    background-color: #dddd6f;
 }

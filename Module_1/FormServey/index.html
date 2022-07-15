@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Survey</title>
     <link rel="stylesheet" href="survey.css">
 </head>
+<!-- alt + shift + f -->
 <body>
     <div class="container">
         <h3>Market Research Survey</h3>
@@ -26,57 +28,65 @@
             <option value="">$50,001-$100,000</option>
             <option value="">$100,000+</option>
         </select>
-        <h6>Gender Identity</h6>
-        <ul>
-            <li>
-                <input type="radio" name="gender"> Male
-            </li>
-            <li>
-                <input type="radio" name="gender"> Female
-            </li>
-            <li>
-                <input type="radio" name="gender"> Nonbinary
-            </li>
-            <li>
-                <input type="radio" name="gender"> Other
-                <br>
-                <input type="text">
-                <br>
-                <span>Maximum of 250 characters.    Currently Used: 0 characters.</span>
-            </li>
-        </ul>
-        <h6>Which of the following products have your purchased in the last 2 months. Please check all that apply.</h6>
-        <ul>
-            <li>
-                <input type="checkbox" name="product"> Product 1
-            </li>
-            <li>
-                <input type="checkbox" name="product"> Product 2
-            </li>
-            <li>
-                <input type="checkbox" name="product"> Product 3
-            </li>
-        </ul>
-        <h6>How often would you use our new product?</h6>
-        <ul>
-            <li>
-                <input type="radio" name="frequence"> Daily
-            </li>
-            <li>
-                <input type="radio" name="frequence"> Weekly
-            </li>
-            <li>
-                <input type="radio" name="frequence"> Monthly
-            </li>
-        </ul>
+        <div id="area_1" class="area" onclick="selectArea(1)">
+            <h6>Gender Identity</h6>
+            <ul>
+                <li>
+                    <input type="radio" name="gender" onchange="changeGender()"> Male
+                </li>
+                <li>
+                    <input type="radio" name="gender" onchange="changeGender()"> Female
+                </li>
+                <li>
+                    <input type="radio" name="gender" onchange="changeGender()"> Nonbinary
+                </li>
+                <li>
+                    <input type="radio" name="gender" onchange="changeGender()"> Other
+                    <br>
+                    <input type="text" id="other" oninput="enterOther()">
+                    <br>
+                    <span id="message" style="display: none;">Maximum of 250 characters. Currently Used: 0
+                        characters.</span>
+                </li>
+            </ul>
+        </div>
+        <div id="area_2" class="area" onclick="selectArea(2)">
+            <h6>Which of the following products have your purchased in the last 2 months. Please check all that apply.
+            </h6>
+            <ul>
+                <li>
+                    <input type="checkbox" name="product"> Product 1
+                </li>
+                <li>
+                    <input type="checkbox" name="product"> Product 2
+                </li>
+                <li>
+                    <input type="checkbox" name="product"> Product 3
+                </li>
+            </ul>
+        </div>
+        <div id="area_3" class="area" onclick="selectArea(3)">
+            <h6>How often would you use our new product?</h6>
+            <ul>
+                <li>
+                    <input type="radio" name="frequence"> Daily
+                </li>
+                <li>
+                    <input type="radio" name="frequence"> Weekly
+                </li>
+                <li>
+                    <input type="radio" name="frequence"> Monthly
+                </li>
+            </ul>
+        </div>
         <h6>What would you pay for the new product?</h6>
-        <table>
+        <table class="tbCurrency">
             <tbody>
                 <tr>
                     <td>$</td>
-                    <td><input type="number"></td>
+                    <td><input style="width:50px;" type="number"></td>
                     <td>.</td>
-                    <td><input type="number"></td>
+                    <td><input style="width:50px;" type="number"></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -126,4 +136,5 @@
     </div>
     <script src="survey.js"></script>
 </body>
+
 </html>
