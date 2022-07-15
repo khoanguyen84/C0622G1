@@ -1,0 +1,51 @@
+*{
+    padding:0px;
+    margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container{
+    margin: 0px auto;
+    max-width: 90%;
+    border: 1px solid red;
+    padding: 5px 5px;
+}
+
+ul{
+    list-style: none;
+}
+
+select{
+    width: 300px;
+}
+
+textarea{
+    width: 100%;
+}
+table{
+    width: 100%;
+}
+
+#tbRate,#tbRate tr, #tbRate td, #tbRate th{
+    border-collapse: collapse;
+    border:1px solid black;
+}
+
+#tbRate>thead>tr>th{
+    padding: 7px 0px;
+    background-color: #e6e6e6;
+}
+
+#tbRate>tbody>tr>td{
+    text-align: center;
+}
+
+#tbRate>tbody>tr>td:first-child{
+    text-align: left;
+}
+
+#tbRate>tbody>tr:nth-child(even){
+    background-color: #e6e6e6;
+}
+#tbRate>tbody>tr:hover{
+    background-color: rgb(221, 221, 111);
+}
