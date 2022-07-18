@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basic</title>
+    <style>
+        *{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+            color: pink;
+        }
+        div{
+            width: 200px; 
+            height: 200px; 
+            background-image:linear-gradient(to right bottom, yellow, orange, red);
+            border-radius: 50%;
+            border: 2px solid orange;
+        }
+        #div_1, span{
+            width: 200px; 
+            height: 200px; 
+            background-image:linear-gradient(to right bottom, lightgreen, green, darkgreen);
+            border-radius: 50%;
+            border: 2px solid blue;
+        }
+
+        .div_class{
+            width: 100px; 
+            height: 100px; 
+            background-image:linear-gradient(to right bottom, white, gray, black);
+            border-radius: 50%;
+            border: 2px solid orange;
+            color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 
+        có 3 cách nhúng (embed) vào HTML
+        1. inline style: viết thông qua thuộc tính style của element
+        2. internal style: viết trong thẻ style, thẻ này đặt trong thẻ head
+        3. external style: viết trong file có phần mở rộng .css, sử dụng thẻ link để connect
+        
+        Ghi đè: cùng 1 thuộc CSS, áp dụng cho 1 đói tượng, thì lần thứ 2 trở đi sẽ ghi
+        đè lên lần trước đó
+     -->
+
+     <!-- <div style="width: 200px; 
+                height: 200px; 
+                background-image:linear-gradient(to right bottom, yellow, orange, red);
+                border-radius: 50%;
+                border: 2px solid orange;
+                ">
+
+     </div> -->
+     <p>Reprehenderit labore eu mollit qui esse dolore ipsum proident est. Occaecat excepteur amet laboris nulla ex. Amet non exercitation do esse proident deserunt elit nisi exercitation cupidatat ipsum proident ea occaecat. Consectetur amet nisi nulla sint laboris reprehenderit cupidatat dolore quis deserunt. Ad voluptate nulla laboris nostrud laborum ex eiusmod ipsum. Reprehenderit est culpa aliquip veniam labore quis occaecat eu. Laboris cillum laborum cupidatat nostrud eiusmod quis.</p>
+     <div id="div_1">CodeGym</div>
+     <div>CodeGym</div>
+     <div class="div_class">CodeGym</div>
+     <div>CodeGym</div>
+     <div class="div_class">CodeGym</div>
+     <span>CodeGym Huế</span>
+</body>
+</html>
