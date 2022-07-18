@@ -22,15 +22,38 @@ button:hover{
 div{
     width: 100px;
     height: 100px;
-    background-color: yellow;
+    /* padding-top: 10px;
+    padding-right: 5px;
+    padding-bottom: 15px;
+    padding-left: 20px; */
+    /* padding: 10px 5px 15px 20px; */
+    /* padding: 10px 5px 10px 5px; */
+    /* padding: 10px 5px; */
+    padding: 10px;
+    /* shorthand */
+    background-color: #ffff00;
+
+    border-width: 3px;
+    /* border-top-width: 1px;
+    border-right-width: 2px;
+    border-bottom-width: 3px;
+    border-left-width: 4px; */
+    border-style: dashed;
+    border-color: red;
+
+    /* border: 3px dashed red; */
+    margin: 5px;
 }
 
-div:hover{
+/* div:hover{
     border-radius: 50%;
     background-color: orange;
     cursor: wait;
-}
+} */
 
+h4{
+    color: red !important;
+}
 h4::before{
     content: "* ";
 }
