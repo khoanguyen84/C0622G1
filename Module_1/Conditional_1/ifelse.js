@@ -68,14 +68,32 @@ let number = 8;
 // "12182"
 
 
-if (score >= 90.0)
-    console.log("A");
-else if (score >= 80.0)
-        console.log("B");
-    else if (score >= 70.0)
-            console.log("C");
-        else if (score >= 60.0)
-                console.log("D");
-            else
-                onsole.log("F");
-            
+// if (score >= 90.0)
+//     console.log("A");
+// else if (score >= 80.0)
+//         console.log("B");
+//     else if (score >= 70.0)
+//             console.log("C");
+//         else if (score >= 60.0)
+//                 console.log("D");
+//             else
+//                 onsole.log("F");
+
+
+const pi = 3.14;
+console.log(pi);
+{
+    {
+        const pi = 3.15;
+        console.log(pi)
+        {
+            {
+                console.log(pi);
+            }
+        }
+    }
+}
+{
+    const pi = 3.16;
+    console.log(pi)
+}
