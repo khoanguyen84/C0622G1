@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop 2</title>
+    <style>
+        table,tr,td{
+            border: 1px solid black;
+            border-collapse:  collapse;
+
+        }
+        table td:first-child{
+            width: 100px;
+        }
+        td{
+            padding: 5px;
+        }
+        table tr:hover{
+            background-color: green;
+            cursor: pointer;
+        }
+
+        .done{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <!-- <table border="1">
+        <tbody>
+            <tr>
+                <td>Job 1</td>
+                <td>
+                    <button>Remove</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Job 2</td>
+                <td>
+                    <button>Remove</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Job 3</td>
+                <td>
+                    <button>Remove</button>
+                </td>
+            </tr>
+        </tbody>
+    </table> -->
+    <div id="job-area">
+
+    </div>
+    <script>
+        let jobCount = 5;
+        let html = "<table>";
+        html += "<tbody>";
+        for(let row = 1; row <= jobCount; row ++){
+            html += `
+                    <tr id="tr_${row}">
+                        <td>Job ${row}</td>
+                        <td>
+                            <button onclick="removeJob(${row})">Remove</button>
+                        </td>
+                    </tr>
+                    `
+        }
+        html += "</tbody>";
+        html += "</table>";
+
+        document.querySelector('#job-area').innerHTML = html;
+
+        // function removeJob(row){
+        //     let confirmed = window.confirm("Are sure to remove this job?");
+        //     if(confirmed){
+        //         document.querySelector(`#tr_${row}`).remove()
+        //     }
+        // }
+        function removeJob(row){
+            let confirmed = window.confirm("Are sure to remove this job?");
+            if(confirmed){
+                document.querySelector(`#tr_${row} td:first-child`).classList.add('done');
+            }
+        }
+    </script>
+</body>
+</html>
