@@ -25,6 +25,10 @@
         .done{
             text-decoration: line-through;
         }
+
+        .d-none{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -50,6 +54,9 @@
             </tr>
         </tbody>
     </table> -->
+    <div>
+        <button onclick="createJob()">Create Job</button>
+    </div>
     <div id="job-area">
 
     </div>
@@ -60,8 +67,11 @@
         for(let row = 1; row <= jobCount; row ++){
             html += `
                     <tr id="tr_${row}">
-                        <td>Job ${row}</td>
+                        <td data-jobname='Job ${row}'>Job ${row}</td>
                         <td>
+                            <button id="btnEdit_${row}" onclick="updateJob(${row})">Edit</button>
+                            <button id="btnSave_${row}" class="d-none" onclick="saveJob(${row})">Save</button>
+                            <button id="btnCancel_${row}" class="d-none" onclick="cancelJob(${row})">Cancel</button>
                             <button onclick="removeJob(${row})">Remove</button>
                         </td>
                     </tr>
@@ -83,6 +93,58 @@
             if(confirmed){
                 document.querySelector(`#tr_${row} td:first-child`).classList.add('done');
             }
+        }
+
+        // function updateJob(row){
+        //     let jobName = prompt('Enter job name: ');
+        //     document.querySelector(`#tr_${row} td:first-child`).innerText = jobName;
+        // }
+        function updateJob(row){
+            let tdJob = document.querySelector(`#tr_${row} td:first-child`);
+            let oldJobName = tdJob.innerText;
+            tdJob.innerHTML = `<input type='text' id="jobname_${row}" value='${oldJobName}'>`;
+            document.querySelector(`#btnEdit_${row}`).classList.add('d-none');
+            document.querySelector(`#btnSave_${row}`).classList.remove('d-none');
+            document.querySelector(`#btnCancel_${row}`).classList.remove('d-none');
+        }
+
+        function cancelJob(row){
+            let tdJob = document.querySelector(`#tr_${row} td:first-child`);
+            let jobName = document.querySelector(`#tr_${row} td:first-child`).getAttribute('data-jobname'); //document.querySelector(`#jobname_${row}`).value;
+            tdJob.innerHTML = jobName;
+            document.querySelector(`#btnEdit_${row}`).classList.remove('d-none');
+            document.querySelector(`#btnSave_${row}`).classList.add('d-none');
+            document.querySelector(`#btnCancel_${row}`).classList.add('d-none');
+        }
+        function saveJob(row){
+            let tdJob = document.querySelector(`#tr_${row} td:first-child`);
+            let jobName = document.querySelector(`#jobname_${row}`).value;
+            tdJob.innerHTML = jobName;
+            document.querySelector(`#btnEdit_${row}`).classList.remove('d-none');
+            document.querySelector(`#btnSave_${row}`).classList.add('d-none');
+            document.querySelector(`#btnCancel_${row}`).classList.add('d-none');
+        }
+
+        function createJob(){
+            let tbJob = document.querySelector('#job-area table tbody');
+            let tr = document.createElement("tr");
+            let newRow = ++jobCount;
+            tr.setAttribute("id", `tr_${newRow}`);
+            // tăng jobCount lên 1
+            // gán jobCount cho newRow
+            // let newRow = jobCount++;
+            // gán jobCount cho newRow
+            // tăng jobCount lên 1
+            tr.innerHTML = `
+                        <td data-jobname='Job ${newRow}'>Job ${newRow}</td>
+                        <td>
+                            <button id="btnEdit_${newRow}" onclick="updateJob(${newRow})">Edit</button>
+                            <button id="btnSave_${newRow}" class="d-none" onclick="saveJob(${newRow})">Save</button>
+                            <button id="btnCancel_${newRow}" class="d-none" onclick="cancelJob(${newRow})">Cancel</button>
+                            <button onclick="removeJob(${newRow})">Remove</button>
+                        </td>
+                        `
+            tbJob.appendChild(tr);
         }
     </script>
 </body>
