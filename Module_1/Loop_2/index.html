@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop 2</title>
+</head>
+<body>
+    <div id="btn-area">
+
+    </div>
+
+    <div id="list-area">
+        <!-- <ul>
+            <li>Item 1
+                <ul>
+                    <li>Item 1.1</li>
+                    <li>Item 1.2</li>
+                    <li>Item 1.3</li>
+                    <li>Item 1.4</li>
+                </ul>
+            </li>
+            <li>Item 2
+                <ul>
+                    <li>Item 2.1</li>
+                    <li>Item 2.2</li>
+                    <li>Item 2.3</li>
+                    <li>Item 2.4</li>
+                </ul>
+            </li>
+        </ul> -->
+    </div>
+    <script>
+        // for(let i = 0; i < 10; i++){
+        //     document.write(`<button>Button ${ i+1 }</button>`)
+        // }
+
+        for(let i = 0; i < 10; i++){
+            document.querySelector('#btn-area').innerHTML += 
+                `<button onclick="showName(${i+1})">Button ${ i+1 }</button>`;
+        }
+
+        function showName(id){
+            console.log(`Button ${id}`);
+        }
+
+        let level_1 = 5; //Number(prompt("Enter level 1: "));
+        let level_2 = 5; //Number(prompt("Enter level 2: "));
+        
+        let list_string = "<ul>";
+        for(let i = 1; i <= level_1; i++){
+            list_string += `<li> Item ${i}`;
+            list_string += "<ul>";
+            for(let j = 1; j <= level_2; j++){
+                list_string += `<li>Item ${i}.${j}</li>`;
+            }
+            list_string += "</ul>";
+            list_string += "</li>";
+        }
+        list_string += "</ul>";
+        document.querySelector("#list-area").innerHTML = list_string;
+    </script>
+</body>
+</html>
+
