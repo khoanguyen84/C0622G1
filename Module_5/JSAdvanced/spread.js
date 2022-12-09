@@ -37,7 +37,7 @@ let staff_1 = {
 
 let staff_2 = {
     ...staff_1,
-    name : "Huy",
+    name: "Huy",
     salary: 10000000
 }
 
@@ -45,3 +45,37 @@ console.log(staff_2["name"]);
 
 // console.log(staff_1);
 // console.log(staff_2);
+
+let matrix = [
+    [1, 1, 3, 3],
+    [4, 5, 6]
+]
+
+let student = {
+    name: "Khoa",
+    language: {
+        name: "English",
+        level: "A"
+    }
+}
+
+let category = [
+    {
+        id: 1,
+        name : "iPhone 14",
+        manufactory: {
+            id: 1,
+            location: "Thailand"
+        },
+        colours:[
+            {
+                
+            }
+        ]
+    }
+]
+
+
+let student_2 = JSON.parse(JSON.stringify(student))
+// convert array, object -> json (JSON.stringify)
+// 
