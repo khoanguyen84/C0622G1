@@ -11,12 +11,20 @@
 var callback = function(n1, n2){
     return n1 + n2
 }
+var callback2 = function(n1, n2){
+    return n1 * n2
+}
 function useCallback(params){
     console.log(params(10, 20));
 }
 // var callback = 5;
-useCallback(callback)
+useCallback(callback2)
 
+function useCallback2(){
+    console.log(callback(10, 20));
+}
+
+useCallback2();
 
 
 // useCallback(function(n1, n2){
