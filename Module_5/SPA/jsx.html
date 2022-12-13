@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSX</title>
+    <style>
+        .form-group{
+            display: flex;
+            margin: 5px 0px;
+            align-items: center;
+        }
+        .form-group>label{
+            width: 100px;
+        }
+        .form-control{
+            border: none;
+            outline: none;
+            border-bottom: 1px dashed gray;
+            padding: 5px;
+            width: 250px;
+        }
+        .btn{
+            border: none;
+            outline: none;
+            background-color: gray;
+            border: 1px solid gray;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-right: 2px;
+        }
+
+        .btn-success{
+            background-color: green;
+            color: white;
+        }
+
+        .btn-dark{
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel" src="jsx.js"></script>
+</body>
+</html>
