@@ -1,10 +1,10 @@
 import React from "react";
-import Register from './UseState/Register';
+import ContactApp from './UseState/ContactApp';
 
 function Main(){
     return (
         <div className="container vh-100">
-            <Register/>
+            <ContactApp/>
         </div>
     )
 }

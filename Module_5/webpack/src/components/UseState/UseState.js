@@ -7,6 +7,8 @@ import React, { useState } from "react";
 //      - Callback
 // + state: ban đầu giá trị của state = initState
 // + setState: cập nhật/thay đổi giá trị của state
+//      - không sử dụng callback
+//      - sử dụng callback
 // Cơ chế hoạt động: 
 //      - mỗi khi state thay đổi thì component sẽ được re-render
 //      - nếu có nhiều state thay đổi cùng 1 lúc, thì component chỉ re-render 1 lần mà thôi
