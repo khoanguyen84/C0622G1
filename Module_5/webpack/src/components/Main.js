@@ -1,16 +1,18 @@
 import React, { useState } from "react";
-import UseEffect from './UseEffect/UseEffect';
-
-
+import Register from './UseState/Register';
+import tabs from "../components/UseEffect/Tabs";
 function Main() {
 
     const [toggle, setToggle] = useState(false);
     return (
         <div className="container">
-            <button className="btn btn-dark btn-sm"
+            {/* <button className="btn btn-dark btn-sm"
                 onClick={() => setToggle(!toggle)}
             >Toggle</button>
-            {toggle && <UseEffect />}
+            {toggle && <Register />} */}
+
+            <Register />
+            {/* {console.log(tabs)} */}
         </div>
     )
 }
