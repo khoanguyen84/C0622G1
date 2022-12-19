@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 
-const contact_db = "contact_db";
+export const contact_db = "contact_db";
 function ContactApp() {
     // const [contacts, setContacts] = useState(["Hiếu Nguyễn", "Tomy Sang", "David Khanh"])
     const [contacts, setContacts] = useState(() => {

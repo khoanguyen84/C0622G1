@@ -1,10 +1,16 @@
-import React from "react";
-import ContactApp from './UseState/ContactApp';
+import React, { useState } from "react";
+import UseEffect from './UseEffect/UseEffect';
 
-function Main(){
+
+function Main() {
+
+    const [toggle, setToggle] = useState(false);
     return (
-        <div className="container vh-100">
-            <ContactApp/>
+        <div className="container">
+            <button className="btn btn-dark btn-sm"
+                onClick={() => setToggle(!toggle)}
+            >Toggle</button>
+            {toggle && <UseEffect />}
         </div>
     )
 }
