@@ -6,6 +6,8 @@ import TwoWayBinding from './UseState/TwoWayBinding';
 import ContactDetail from './UseState/ContactDetail';
 import Post from './Post/Post';
 import PostDetail from './Post/PostDetail';
+import Album from './Album/Album';
+import AlbumDetail from './Album/AlbumDetail';
 function Main() {
 
     return (
@@ -17,6 +19,8 @@ function Main() {
                 <Route path="/contact/detail/:name/:idx" element={ <ContactDetail/>} />
                 <Route path="/post" element={ <Post/>} />
                 <Route path="/post/detail/:postId" element={ <PostDetail/>} />
+                <Route path="/album" element={ <Album/>} />
+                <Route path="/album/:albumId" element={ <AlbumDetail/>} />
             </Routes>
         </div>
     )

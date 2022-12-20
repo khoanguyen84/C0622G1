@@ -14,7 +14,7 @@ function Header() {
                         <Link className="nav-link active" aria-current="page" to={"/twowaybining"}>TwoWayBinding</Link>
                         <Link className="nav-link" to={"/register"}>Register</Link>
                         <Link className="nav-link" to={"/post"}>Post</Link>
-                        <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">Disabled</a>
+                        <Link className="nav-link" to={"/album"}>Album</Link>
                     </div>
                 </div>
             </div>
