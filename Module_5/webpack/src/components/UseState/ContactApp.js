@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { Link } from 'react-router-dom';
 
 export const contact_db = "contact_db";
 function ContactApp() {
@@ -74,11 +75,16 @@ function ContactApp() {
             <div className="w-25">
                 <ul className="list-group list-group-flush">
                     {
-                        contacts.map((contact) => (
+                        contacts.map((contact, index) => (
                             <li key={contact} className="list-group-item d-flex justify-content-between">{contact}
-                                <span role="button" className="text-danger fw-bolder"
-                                    onClick={() => handleRemoveContact(contact)}
-                                >&times;</span>
+                                <div>
+                                    <Link to={`/contact/detail/${contact}/${index}`}>
+                                        <i className="fa fa-eye"></i>
+                                    </Link>
+                                    <span role="button" className="text-danger fw-bolder"
+                                        onClick={() => handleRemoveContact(contact)}
+                                    >&times;</span>
+                                </div>
                             </li>
                         ))
                     }

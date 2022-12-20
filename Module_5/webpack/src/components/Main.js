@@ -1,18 +1,23 @@
 import React, { useState } from "react";
+import { Routes, Route } from 'react-router-dom';
+import ContactApp from './UseState/ContactApp';
 import Register from './UseState/Register';
-import tabs from "../components/UseEffect/Tabs";
+import TwoWayBinding from './UseState/TwoWayBinding';
+import ContactDetail from './UseState/ContactDetail';
+import Post from './Post/Post';
+import PostDetail from './Post/PostDetail';
 function Main() {
 
-    const [toggle, setToggle] = useState(false);
     return (
         <div className="container">
-            {/* <button className="btn btn-dark btn-sm"
-                onClick={() => setToggle(!toggle)}
-            >Toggle</button>
-            {toggle && <Register />} */}
-
-            <Register />
-            {/* {console.log(tabs)} */}
+            <Routes>
+                <Route path="/" element={ <ContactApp/>} />
+                <Route path="/register" element={ <Register/>} />
+                <Route path="/twowaybining" element={ <TwoWayBinding/>} />
+                <Route path="/contact/detail/:name/:idx" element={ <ContactDetail/>} />
+                <Route path="/post" element={ <Post/>} />
+                <Route path="/post/detail/:postId" element={ <PostDetail/>} />
+            </Routes>
         </div>
     )
 }
